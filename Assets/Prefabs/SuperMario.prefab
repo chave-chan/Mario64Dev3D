@@ -2077,7 +2077,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 4087023090788666778}
-  speed: 0
+  characterController: {fileID: 9093922729756714004}
 --- !u!1 &4087023090798067706
 GameObject:
   m_ObjectHideFlags: 0

@@ -5,11 +5,24 @@ using UnityEngine;
 public class MarioPlayerController : MonoBehaviour
 {
     [SerializeField] private Animator animator;
-    [Range(0,2)]
-    [SerializeField] private float speed;
+    [SerializeField] private CharacterController characterController;
+    private float verticalSpeed = 0.0f;
+    private bool onGround;
 
-    void Update()
+    private void Update()
     {
-        animator.SetFloat("Speed", speed);
+        Vector3 movement = Vector3.zero;
+        verticalSpeed += Physics.gravity.y * Time.deltaTime;
+        movement.y += verticalSpeed * Time.deltaTime;
+        CollisionFlags cf = characterController.Move(movement);
+        if((cf & CollisionFlags.Below) != 0){
+            onGround = true;
+            verticalSpeed = 0;
+        }
+        else
+        {
+            onGround = false;
+        }
+        animator.SetBool("OnGround", onGround);
     }
 }

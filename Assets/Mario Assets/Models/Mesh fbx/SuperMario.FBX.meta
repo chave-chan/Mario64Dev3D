@@ -434,7 +434,7 @@ ModelImporter:
     second: wall_slide_left
   - first:
       74: 7400058
-    second: jump_kick
+    second: punch3
   - first:
       74: 7400060
     second: side_flip_v2
@@ -446,7 +446,7 @@ ModelImporter:
     second: punch2
   - first:
       74: 7400066
-    second: kick_triple
+    second: kick_jump
   - first:
       74: 7400068
     second: creep
@@ -4322,7 +4322,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: jump_kick
+      name: punch3
       takeName: Take 001
       internalID: 0
       firstFrame: 2500
@@ -4866,7 +4866,7 @@ ModelImporter:
       maskSource: {instanceID: 0}
       additiveReferencePoseFrame: 0
     - serializedVersion: 16
-      name: kick_triple
+      name: kick_jump
       takeName: Take 001
       internalID: 0
       firstFrame: 2900
