@@ -19,7 +19,6 @@ public class MarioPlayerController : MonoBehaviour
     [SerializeField] private KeyCode runKey;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
-    [SerializeField] private float currentSpeed = 0;
     private float verticalSpeed = 0.0f;
     private bool onGround;
 
@@ -37,20 +36,22 @@ public class MarioPlayerController : MonoBehaviour
         if (Input.GetKey(backKey)) { movement -= l_forward; }
         if (Input.GetKey(rightKey)) { movement += l_right; }
         if (Input.GetKey(leftKey)) { movement -= l_right; }
-        else { currentSpeed = 0; }
-        currentSpeed = Input.GetKey(runKey) ? runSpeed : walkSpeed; //Si es true = run; Si es false = walk
+        float currentSpeed = Input.GetKey(runKey) ? runSpeed : walkSpeed; //Si es true = run; Si es false = walk
         if(movement.magnitude > 0)
         {
             movement.Normalize();
             transform.forward = movement;
             movement *= currentSpeed * Time.deltaTime;
         }
+        //Idle, Walk & Run Animations
+        float animSpeed = movement.x == 0 ? 0.0f : 0.3f;
+        if (Input.GetKey(runKey)) { animSpeed = 0.8f; }
+        animator.SetFloat("Speed", animSpeed);
         //Jump
         if (Input.GetKeyDown(jumpKey) && onGround)
         {
             Jump();
         }
-        if(!onGround) { Fall(); }
         //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
         movement.y += verticalSpeed * Time.deltaTime;
@@ -68,20 +69,23 @@ public class MarioPlayerController : MonoBehaviour
             }
             onGround = false;
         }
-        animator.SetBool("OnGround", onGround);
-        animator.SetFloat("Speed", currentSpeed);
-        //Idle, Walk & Run animations
-        /*
-        float animSpeed = movement.x == 0 ? 0.0f : 0.03f;
-        if(Input.GetKey(runKey)) { animSpeed = 0.8f; }
-        animator.SetFloat("Speed", animSpeed);
-        */
+        animator.SetBool("OnGround", onGround);      
     }
 
     private void Jump()
     {
         verticalSpeed = jumpSpeed;
         animator.SetTrigger("Jump1");
+    }
+
+    private void DoubleJump()
+    {
+        animator.SetTrigger("Jump2");
+    }
+
+    private void TripleJump()
+    {
+        animator.SetTrigger("Jump3");
     }
 
     private void Fall()
