@@ -2078,6 +2078,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 4087023090788666778}
   characterController: {fileID: 9093922729756714004}
+  jumpKey: 32
+  jumpSpeed: 4
 --- !u!1 &4087023090798067706
 GameObject:
   m_ObjectHideFlags: 0
