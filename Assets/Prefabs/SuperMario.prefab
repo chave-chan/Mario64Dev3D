@@ -1061,7 +1061,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7d97562bd76f694c8f7242999994597, type: 2}
+  - {fileID: 2100000, guid: d6afe9bac371d2c4b94f0b8b99bf84e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1143,7 +1143,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: b7d97562bd76f694c8f7242999994597, type: 2}
+  - {fileID: 2100000, guid: d6afe9bac371d2c4b94f0b8b99bf84e0, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2076,10 +2076,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce2983d2ccbea824e9ec2dfd9e184d68, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  camera: {fileID: 0}
   animator: {fileID: 4087023090788666778}
   characterController: {fileID: 9093922729756714004}
   jumpKey: 32
-  jumpSpeed: 4
+  jumpSpeed: 7
+  forwardKey: 119
+  backKey: 115
+  rightKey: 100
+  leftKey: 97
+  runKey: 304
+  walkSpeed: 2
+  runSpeed: 7
 --- !u!1 &4087023090798067706
 GameObject:
   m_ObjectHideFlags: 0

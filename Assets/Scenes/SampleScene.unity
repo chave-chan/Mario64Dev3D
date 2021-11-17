@@ -453,5 +453,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: SuperMario
       objectReference: {fileID: 0}
+    - target: {fileID: 8972643604823044854, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
+      propertyPath: camera
+      value: 
+      objectReference: {fileID: 963194227}
+    - target: {fileID: 8972643604823044854, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
+      propertyPath: jumpSpeed
+      value: 7
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
