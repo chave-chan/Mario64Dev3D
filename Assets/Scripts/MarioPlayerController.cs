@@ -21,6 +21,7 @@ public class MarioPlayerController : MonoBehaviour
     [SerializeField] private float runSpeed;
     private float verticalSpeed = 0.0f;
     private bool onGround;
+    private int jumps = 0;
 
     private void Update()
     {
@@ -37,7 +38,7 @@ public class MarioPlayerController : MonoBehaviour
         if (Input.GetKey(rightKey)) { movement += l_right; }
         if (Input.GetKey(leftKey)) { movement -= l_right; }
         float currentSpeed = Input.GetKey(runKey) ? runSpeed : walkSpeed; //Si es true = run; Si es false = walk
-        if(movement.magnitude > 0)
+        if (movement.magnitude > 0)
         {
             movement.Normalize();
             transform.forward = movement;
@@ -50,7 +51,10 @@ public class MarioPlayerController : MonoBehaviour
         //Jump
         if (Input.GetKeyDown(jumpKey) && onGround)
         {
-            Jump();
+            if (jumps == 0) { Jump(); jumps = 1; }
+            //SI SE MUEVE YA NO HACE JUMP2 NI JUMP3
+            if (jumps == 1) { DoubleJump(); jumps = 2; }
+            if (jumps == 2) { TripleJump(); jumps = 0; }
         }
         //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
@@ -86,10 +90,5 @@ public class MarioPlayerController : MonoBehaviour
     private void TripleJump()
     {
         animator.SetTrigger("Jump3");
-    }
-
-    private void Fall()
-    {
-        animator.SetTrigger("Fall");
     }
 }
