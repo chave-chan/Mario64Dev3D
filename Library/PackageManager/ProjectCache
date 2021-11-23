@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637726754365406074
-    m_Hash: 4007186375
+      ticks: 637732809776714640
+    m_Hash: 1857255145
   m_LockFileStatus:
     m_FilePath: "F:/Uni Stuff/TecnoCampus/4t/1r Trimestre/Desenvolupament de Jocs
       3D/Pr\xE0ctiques/Mario64Dev3D/Packages/packages-lock.json"
@@ -15,7 +15,7 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637727672895983113
+      ticks: 637732810135400127
     m_Hash: 38571225
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}

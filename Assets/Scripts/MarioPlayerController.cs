@@ -49,12 +49,10 @@ public class MarioPlayerController : MonoBehaviour
         if (Input.GetKey(runKey)) { animSpeed = 0.8f; }
         animator.SetFloat("Speed", animSpeed);
         //Jump
-        if (Input.GetKeyDown(jumpKey) && onGround)
-        {
-            if (jumps == 0) { Jump(); jumps = 1; }
-            //SI SE MUEVE YA NO HACE JUMP2 NI JUMP3
-            if (jumps == 1) { DoubleJump(); jumps = 2; }
-            if (jumps == 2) { TripleJump(); jumps = 0; }
+        if (Input.GetKeyDown(jumpKey) && onGround) {
+            if(jumps == 0) { Jump(); }
+            else if(jumps == 1) { DoubleJump(); }
+            else if(jumps == 2) { TripleJump(); }
         }
         //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
@@ -80,15 +78,21 @@ public class MarioPlayerController : MonoBehaviour
     {
         verticalSpeed = jumpSpeed;
         animator.SetTrigger("Jump1");
+        jumps = 1;
     }
 
     private void DoubleJump()
     {
+        verticalSpeed = jumpSpeed + (jumpSpeed*0.25f);
         animator.SetTrigger("Jump2");
+        jumps = 2;
     }
 
     private void TripleJump()
     {
+        verticalSpeed = jumpSpeed + (jumpSpeed * 0.5f);
         animator.SetTrigger("Jump3");
+        jumps = 0;
     }
+
 }
