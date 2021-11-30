@@ -1997,6 +1997,7 @@ GameObject:
   - component: {fileID: 4087023090788666778}
   - component: {fileID: 9093922729756714004}
   - component: {fileID: 8972643604823044854}
+  - component: {fileID: 580144144101662990}
   m_Layer: 0
   m_Name: SuperMario
   m_TagString: Untagged
@@ -2088,6 +2089,20 @@ MonoBehaviour:
   runKey: 304
   walkSpeed: 2
   runSpeed: 7
+--- !u!114 &580144144101662990
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087023090798067704}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 03fbf7a655fcab74a920d8eeb5fb9d26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bridgeRB: {fileID: 0}
+  bridgeForce: 1
 --- !u!1 &4087023090798067706
 GameObject:
   m_ObjectHideFlags: 0
