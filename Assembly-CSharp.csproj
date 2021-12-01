@@ -56,6 +56,7 @@
     <Analyzer Include="C:\Program Files (x86)\Microsoft Visual Studio Tools for Unity\16.0\Analyzers\Microsoft.Unity.Analyzers.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Door.cs" />
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ForceApplier.cs" />
     <Compile Include="Assets\Scripts\DeadZone.cs" />
@@ -66,7 +67,7 @@
     <Compile Include="Assets\Scripts\GameManager.cs" />
     <Compile Include="Assets\Scripts\IRestartGame.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
-    <Compile Include="Assets\Scripts\Door.cs" />
+    <Compile Include="Assets\Scripts\CheckPoint.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mario Assets\Models\Shaders\RimSpecularAlpha.shader" />

@@ -15,11 +15,11 @@ F:/Uni Stuff/TecnoCampus/4t/1r Trimestre/Desenvolupament de Jocs 3D/Pràctiques/
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58246
+53383
 Successfully changed project path to: F:/Uni Stuff/TecnoCampus/4t/1r Trimestre/Desenvolupament de Jocs 3D/Pràctiques/Mario64Dev3D
 F:/Uni Stuff/TecnoCampus/4t/1r Trimestre/Desenvolupament de Jocs 3D/Pràctiques/Mario64Dev3D
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 27.32 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 34.21 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.2.7f1 (c53830e277f1)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.2.7.f1/Editor/Data/Resources/UnitySubsystems
@@ -35,22 +35,55 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7.f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.2.7.f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.2.7.f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56596
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56168
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.2.7.f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002675 seconds.
+Registered in 0.002207 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 26.54 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 33.16 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  1.149 seconds
+- Completed reload, in  1.288 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.000778 seconds.
+Registered in 0.000942 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.083 seconds
+Platform modules already initialized, skipping
+========================================================================
+Worker process is ready to serve import requests
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1131 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 62.0 MB.
+System memory in use after: 62.0 MB.
+
+Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1577.
+Total: 1.969600 ms (FindLiveObjects: 0.151600 ms CreateObjectMapping: 0.055700 ms MarkObjects: 1.661000 ms  DeleteObjects: 0.099900 ms)
+
+========================================================================
+Received Import Request.
+  path: Assets/Scripts/CheckPoint.cs
+  artifactKey: Guid(c632892d5fbf2bb479b82e245d7149f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/CheckPoint.cs using Guid(c632892d5fbf2bb479b82e245d7149f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e75d2622375c2bd810240755628f133b') in 0.049264 seconds
+  Import took 0.052180 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001167 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
 Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
@@ -59,600 +92,123 @@ Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.961 seconds
+- Completed reload, in  1.054 seconds
 Platform modules already initialized, skipping
-========================================================================
-Worker process is ready to serve import requests
-Launched and connected shader compiler UnityShaderCompiler.exe after 0.06 seconds
-Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1129 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 61.9 MB.
-System memory in use after: 62.0 MB.
-
-Unloading 10 unused Assets to reduce memory usage. Loaded Objects now: 1575.
-Total: 2.600000 ms (FindLiveObjects: 0.169000 ms CreateObjectMapping: 0.036600 ms MarkObjects: 2.259700 ms  DeleteObjects: 0.133700 ms)
-
-========================================================================
-Received Import Request.
-  path: Assets/Prefabs/ChainChomp/source
-  artifactKey: Guid(6e97ad4b08895184ab1760337931bb1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/ChainChomp/source using Guid(6e97ad4b08895184ab1760337931bb1e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3fe06cfdd8d1abf7d4a14e38b12bc370') in 0.011234 seconds
-  Import took 0.013905 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000384 seconds.
-  path: Assets/Prefabs/ChainChomp
-  artifactKey: Guid(4fc0951dd06929a459afaf226622d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/ChainChomp using Guid(4fc0951dd06929a459afaf226622d93d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '04ed7495274382fc87c06db48b5e5bdc') in 0.108235 seconds
-  Import took 0.111387 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.755672 seconds.
-  path: Assets/Prefabs/ChainChomp/source/Chain Chomp.fbx
-  artifactKey: Guid(f91d64b49b751a0448af98ea6c8cc934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/ChainChomp/source/Chain Chomp.fbx using Guid(f91d64b49b751a0448af98ea6c8cc934) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5adf05fd1c1a24e75b3dc6302f6e12dd') in 0.296619 seconds
-  Import took 0.300064 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 21.866381 seconds.
-  path: Assets/Prefabs/Chain Chomp.prefab
-  artifactKey: Guid(0d94c96ba8c9df64baf9439038734aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Chain Chomp.prefab using Guid(0d94c96ba8c9df64baf9439038734aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b353d0f310f31f12174724fcc04b1e2f') in 0.026302 seconds
-  Import took 0.028819 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.648332 seconds.
-  path: Assets/Prefabs/Chain Chomp.fbx
-  artifactKey: Guid(ff9c186d04ea281428861f53d76bd7af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Chain Chomp.fbx using Guid(ff9c186d04ea281428861f53d76bd7af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '85c164fab6be791bf3948d5da2fb25b5') in 0.043551 seconds
-  Import took 0.045856 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.988038 seconds.
-  path: Assets/Prefabs/Chain Chomp.prefab
-  artifactKey: Guid(0d94c96ba8c9df64baf9439038734aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Chain Chomp.prefab using Guid(0d94c96ba8c9df64baf9439038734aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b5e8dd642bacbdbcf7d8fe61739c636a') in 0.019942 seconds
-  Import took 0.022250 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.323222 seconds.
-  path: Assets/Prefabs/DeadZone.prefab
-  artifactKey: Guid(0f96c7153271b7a4895ddb9c830bcddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/DeadZone.prefab using Guid(0f96c7153271b7a4895ddb9c830bcddc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '201c32813cf353a98d4c5be7536ebc26') in 0.021241 seconds
-  Import took 0.023935 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 141.339100 seconds.
-  path: Assets/Prefabs/Chain Chomp.prefab
-  artifactKey: Guid(0d94c96ba8c9df64baf9439038734aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Chain Chomp.prefab using Guid(0d94c96ba8c9df64baf9439038734aa7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '920e72f66ce4431eb548f31014eba2fb') in 0.343748 seconds
-  Import took 0.346413 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 814.042687 seconds.
-  path: Assets/Prefabs/RedButton.fbx
-  artifactKey: Guid(74d84db5bcfb3cf4b822ab1d8fdc75e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/RedButton.fbx using Guid(74d84db5bcfb3cf4b822ab1d8fdc75e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7ac0d30284eddf061036d9e9609a11ba') in 0.061909 seconds
-  Import took 0.064599 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 226.689726 seconds.
-  path: Assets/Mario Assets/Models/UI
-  artifactKey: Guid(7cdd4a036c2a3f4478ea9fddddbb1316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI using Guid(7cdd4a036c2a3f4478ea9fddddbb1316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b60d26170c49c3862648c35bbe26bd96') in 0.146090 seconds
-  Import took 0.149517 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000347 seconds.
-  path: Assets/Mario Assets/Models/UI
-  artifactKey: Guid(7cdd4a036c2a3f4478ea9fddddbb1316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI using Guid(7cdd4a036c2a3f4478ea9fddddbb1316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b60d26170c49c3862648c35bbe26bd96') in 0.038597 seconds
-  Import took 0.041277 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000400 seconds.
-  path: Assets/Mario Assets/Models/UI/EmptyCircleUI.psd
-  artifactKey: Guid(c68edfdf48300d8489aeac543ff87aba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/EmptyCircleUI.psd using Guid(c68edfdf48300d8489aeac543ff87aba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e2d0c6e80598663eeeecb35efef492fc') in 0.122749 seconds
-  Import took 0.126253 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000269 seconds.
-  path: Assets/Mario Assets/Models/UI/HealthDisc.psd
-  artifactKey: Guid(8f573d0e1922d064188c51095826cdf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/HealthDisc.psd using Guid(8f573d0e1922d064188c51095826cdf0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e17ee19610be476c08dc990f6f8783c6') in 0.158353 seconds
-  Import took 0.160650 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000373 seconds.
-  path: Assets/Mario Assets/Models/UI/MarioHeadCarving.psd
-  artifactKey: Guid(539f9ee6866ad0d4f81ed4ba33893f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/MarioHeadCarving.psd using Guid(539f9ee6866ad0d4f81ed4ba33893f1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ed2667b005b5f84eee8590f1fbd642dc') in 0.084396 seconds
-  Import took 0.087384 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000245 seconds.
-  path: Assets/Mario Assets/Models/UI/PowerStar.psd
-  artifactKey: Guid(857cc06effd90ad46b0acce05e92e649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/PowerStar.psd using Guid(857cc06effd90ad46b0acce05e92e649) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a0110fde00c78aff64cef88eea76ac36') in 0.018632 seconds
-  Import took 0.021100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000451 seconds.
-  path: Assets/Mario Assets/Models/UI/CoinIcon.psd
-  artifactKey: Guid(3d6e2b12e9bf1744bae521e0d2f44b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/CoinIcon.psd using Guid(3d6e2b12e9bf1744bae521e0d2f44b23) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b34fa4685e19b924b7783da8341a76a1') in 0.113363 seconds
-  Import took 0.115978 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000371 seconds.
-  path: Assets/Mario Assets/Models/UI/DiscDamageGloss.psd
-  artifactKey: Guid(b0acebc54bcac9046954e39ef4b51509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/DiscDamageGloss.psd using Guid(b0acebc54bcac9046954e39ef4b51509) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '1c8cbad1c19974428de210424435cf16') in 0.156817 seconds
-  Import took 0.158708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/Mario Assets/Models/UI/GoBackIcon.psd
-  artifactKey: Guid(830990d44efbb234998bc3234213ff09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/GoBackIcon.psd using Guid(830990d44efbb234998bc3234213ff09) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '614b14b0670baaf3c3b0ec0360b5a196') in 0.060304 seconds
-  Import took 0.062619 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000343 seconds.
-  path: Assets/Mario Assets/Models/UI/PixelMatte.psd
-  artifactKey: Guid(4502015f1e25d444eb2db3dfefd0de6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/PixelMatte.psd using Guid(4502015f1e25d444eb2db3dfefd0de6d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3736716d5e306763f2a4415aefffacc4') in 0.051857 seconds
-  Import took 0.054070 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000324 seconds.
-  path: Assets/Mario Assets/Models/UI/ControllerIcon.psd
-  artifactKey: Guid(036cbf8795256ba44af33107ef50c99e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/ControllerIcon.psd using Guid(036cbf8795256ba44af33107ef50c99e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eae375aaacfcca809405cb09af9f5fba') in 0.104142 seconds
-  Import took 0.106107 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000348 seconds.
-  path: Assets/Mario Assets/Models/UI/BowserMask.psd
-  artifactKey: Guid(9a971db17771702458970bc34d38180b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/BowserMask.psd using Guid(9a971db17771702458970bc34d38180b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82556c898afc82fa87f3a8173904b001') in 0.282210 seconds
-  Import took 0.284961 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000411 seconds.
-  path: Assets/Mario Assets/Models/UI/RoundedUI.psd
-  artifactKey: Guid(b457b89906f34814daa055537f9a3175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/RoundedUI.psd using Guid(b457b89906f34814daa055537f9a3175) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '524ca0d703b45b4701107f7faa813960') in 0.049920 seconds
-  Import took 0.052152 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000281 seconds.
-  path: Assets/Mario Assets/Models/UI/HealthDiscOverlay.psd
-  artifactKey: Guid(62af946b7455f194d8c9e9e0e5658b36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/HealthDiscOverlay.psd using Guid(62af946b7455f194d8c9e9e0e5658b36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b4d23c22a79bd5b581ee459370a9ca18') in 0.107848 seconds
-  Import took 0.111499 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000357 seconds.
-  path: Assets/Mario Assets/Models/UI/XMarker.psd
-  artifactKey: Guid(ee840f1917190264fbb91b57bad81be6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/XMarker.psd using Guid(ee840f1917190264fbb91b57bad81be6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ee30f9e1544cf1939137c681226d9d7f') in 0.117726 seconds
-  Import took 0.119950 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/Mario Assets/Models/UI/GUINumbers.psd
-  artifactKey: Guid(b3160effddd16fc449cde73b80ce6ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/UI/GUINumbers.psd using Guid(b3160effddd16fc449cde73b80ce6ada) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a5b8fe0a57f6d0f06e89b5f09ebbcdc5') in 0.199691 seconds
-  Import took 0.201874 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 15.892295 seconds.
-  path: Assets/Mario Assets/Models/Textures/Actors
-  artifactKey: Guid(5f2ef719f2fbff84f8ff2b24964f9ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Actors using Guid(5f2ef719f2fbff84f8ff2b24964f9ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f157eac58df145428146a951fe8fc0b1') in 0.005755 seconds
-  Import took 0.009367 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000752 seconds.
-  path: Assets/Mario Assets/Models/Textures/Actors
-  artifactKey: Guid(5f2ef719f2fbff84f8ff2b24964f9ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Actors using Guid(5f2ef719f2fbff84f8ff2b24964f9ac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f157eac58df145428146a951fe8fc0b1') in 0.006569 seconds
-  Import took 0.008980 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.067840 seconds.
-  path: Assets/Mario Assets/Models/Textures/Actors/BobOmb.psd
-  artifactKey: Guid(a0499f6f72dfbad4b83573d593876adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Actors/BobOmb.psd using Guid(a0499f6f72dfbad4b83573d593876adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd615831016e59fc81fb54ea3aa1013d0') in 0.040051 seconds
-  Import took 0.042635 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000307 seconds.
-  path: Assets/Mario Assets/Models/Textures/Actors/body1.png
-  artifactKey: Guid(d3db53eba88ae9140bcb57e8834c1804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Actors/body1.png using Guid(d3db53eba88ae9140bcb57e8834c1804) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9e7dc389e49b366422ed86ba00469c42') in 0.025520 seconds
-  Import took 0.028522 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000442 seconds.
-  path: Assets/Mario Assets/Models/Textures/Actors/BobOmbBuddy.psd
-  artifactKey: Guid(a5ad26ca3cba29f4d95907918121d6d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Actors/BobOmbBuddy.psd using Guid(a5ad26ca3cba29f4d95907918121d6d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5606f0bb12f9bc39831b771d5d1189bf') in 0.050232 seconds
-  Import took 0.053003 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.266230 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps
-  artifactKey: Guid(c5bf0c13f2e684d46bb21b93584d4efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps using Guid(c5bf0c13f2e684d46bb21b93584d4efb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'db0fcd029ed18b18d83d968ef9deeb81') in 0.009417 seconds
-  Import took 0.012345 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.053099 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c00.png
-  artifactKey: Guid(609dd8290b637f947a628625eaaa9f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c00.png using Guid(609dd8290b637f947a628625eaaa9f17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b33fcf84e3353b5f75fec0cf8622c467') in 0.079823 seconds
-  Import took 0.082813 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000413 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c03.png
-  artifactKey: Guid(e8298e9362ff59a48b86e62de9e1f2ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c03.png using Guid(e8298e9362ff59a48b86e62de9e1f2ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '7560e00d53ac3a09922a7470522ed560') in 0.054190 seconds
-  Import took 0.056688 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000363 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c02 (1).png
-  artifactKey: Guid(f6841e722dfbb914dad3ff03dfd7f625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c02 (1).png using Guid(f6841e722dfbb914dad3ff03dfd7f625) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3e16b68ce903301b2fd417a9b0992d82') in 0.037236 seconds
-  Import took 0.039693 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000416 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c05.png
-  artifactKey: Guid(869df65003491034e8a837dd3322c543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c05.png using Guid(869df65003491034e8a837dd3322c543) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c62224b57cf39f3d172efc8383022bfa') in 0.047972 seconds
-  Import took 0.050656 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000365 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c02.png
-  artifactKey: Guid(60759a3697c31fe41a64e19b0e83f762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c02.png using Guid(60759a3697c31fe41a64e19b0e83f762) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ef0ef17a1e9c55feb90ce01821080a5b') in 0.025678 seconds
-  Import took 0.028312 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000339 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c01.png
-  artifactKey: Guid(baed255fd0cb95246b5271a291d92f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c01.png using Guid(baed255fd0cb95246b5271a291d92f64) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'c9e4e04493d25c7351c2f30743726b7f') in 0.093609 seconds
-  Import took 0.096713 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000376 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c01 (1).png
-  artifactKey: Guid(5bad263f9769e68468b1311a635f6140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c01 (1).png using Guid(5bad263f9769e68468b1311a635f6140) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '114de8390bcd7244a9cf87885e160a8c') in 0.028148 seconds
-  Import took 0.031256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000652 seconds.
-  path: Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c04.png
-  artifactKey: Guid(a858da222dac34747b4567ed7f3e3991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/CubeMaps/cubemappng_c04.png using Guid(a858da222dac34747b4567ed7f3e3991) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '722eb9716598d2432fc5005c1ab7fac5') in 0.041566 seconds
-  Import took 0.044708 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.564106 seconds.
-  path: Assets/Mario Assets/Models/Textures/Doodads
-  artifactKey: Guid(905ca3cd35eba0d41ac6c7807cd45eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Doodads using Guid(905ca3cd35eba0d41ac6c7807cd45eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a60b0eb9d52f5d8106310fd822dbcc15') in 0.005026 seconds
-  Import took 0.007026 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.005762 seconds.
-  path: Assets/Mario Assets/Models/Textures/Doodads
-  artifactKey: Guid(905ca3cd35eba0d41ac6c7807cd45eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Doodads using Guid(905ca3cd35eba0d41ac6c7807cd45eb0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a60b0eb9d52f5d8106310fd822dbcc15') in 0.005350 seconds
-  Import took 0.009573 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.068503 seconds.
-  path: Assets/Mario Assets/Models/Textures/Doodads/Cannon.psd
-  artifactKey: Guid(3a5822ba10947984ea39e18ecb2cb55d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Doodads/Cannon.psd using Guid(3a5822ba10947984ea39e18ecb2cb55d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fe7eb2ca4d56374925acfdbd4736373c') in 0.012666 seconds
-  Import took 0.015328 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000275 seconds.
-  path: Assets/Mario Assets/Models/Textures/Doodads/Flowers.psd
-  artifactKey: Guid(485bc2efd06c81e438b34e671bf9a047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Doodads/Flowers.psd using Guid(485bc2efd06c81e438b34e671bf9a047) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8ac5ff5d05d874b185752e1ac428615c') in 0.051529 seconds
-  Import took 0.053676 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/Mario Assets/Models/Textures/Doodads/Fence.psd
-  artifactKey: Guid(61d801ca588d97446b5cb497562d5250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Doodads/Fence.psd using Guid(61d801ca588d97446b5cb497562d5250) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8cee42ca066599e005a9ad6f4a435177') in 0.021518 seconds
-  Import took 0.024193 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.223641 seconds.
-  path: Assets/Mario Assets/Models/Textures/Effects
-  artifactKey: Guid(0acf4ee02488ef74d95fd0584636b834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Effects using Guid(0acf4ee02488ef74d95fd0584636b834) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2768f711f7f092f40539916ffa5d3ed2') in 0.012176 seconds
-  Import took 0.014623 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.711887 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario
-  artifactKey: Guid(e0390e35793642343bea75a1e3cfc7fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario using Guid(e0390e35793642343bea75a1e3cfc7fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92f17b6d7c456df03de907cd36f148d6') in 0.033914 seconds
-  Import took 0.036332 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.039880 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario/body.png
-  artifactKey: Guid(45fd797be5c3f3d46a6577d9ecd9616f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario/body.png using Guid(45fd797be5c3f3d46a6577d9ecd9616f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'bd1d27483ca863558bc8ec683bfce294') in 0.153726 seconds
-  Import took 0.156338 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000327 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario/face.png
-  artifactKey: Guid(a771a2db1aeef7f4f802caca9775b35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario/face.png using Guid(a771a2db1aeef7f4f802caca9775b35b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e1686432cb46edde78831efa04fa3893') in 0.015355 seconds
-  Import took 0.017939 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000382 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario/hair.png
-  artifactKey: Guid(04c1050a51a2099489fa0e626f43e18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario/hair.png using Guid(04c1050a51a2099489fa0e626f43e18f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '431f0a7d8dcedf0d270bf7cc94a07721') in 0.027890 seconds
-  Import took 0.033968 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000412 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario/pupilX.psd
-  artifactKey: Guid(38f1c6a2222393544a90cd9ec8062fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario/pupilX.psd using Guid(38f1c6a2222393544a90cd9ec8062fbf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'cdf82dedb969dae94c71af834df3a84b') in 0.047299 seconds
-  Import took 0.050514 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000464 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario/glove.png
-  artifactKey: Guid(91cc88b845e3c584daaa8692aaca2e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario/glove.png using Guid(91cc88b845e3c584daaa8692aaca2e06) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a4ac0267a29b16367c03aac60295aa38') in 0.018908 seconds
-  Import took 0.022942 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000309 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario/hat.png
-  artifactKey: Guid(2d88a1d9f72f2ee42a1429d2b2e8b9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario/hat.png using Guid(2d88a1d9f72f2ee42a1429d2b2e8b9a0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'eaccca07f2a8b38fe342389b588c52fe') in 0.018835 seconds
-  Import took 0.022607 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000372 seconds.
-  path: Assets/Mario Assets/Models/Textures/Mario/pupil.png
-  artifactKey: Guid(598a61a5b0b06064291e1b82629b28fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Mario/pupil.png using Guid(598a61a5b0b06064291e1b82629b28fb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ce6412ecbaecb6137728eda9bb154f99') in 0.029009 seconds
-  Import took 0.033566 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.999106 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled
-  artifactKey: Guid(e3f471c7c7f7d2b489dd592945466b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled using Guid(e3f471c7c7f7d2b489dd592945466b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b41b1571287fe9c03bb9ab19add808a6') in 0.006902 seconds
-  Import took 0.009160 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.003345 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled
-  artifactKey: Guid(e3f471c7c7f7d2b489dd592945466b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled using Guid(e3f471c7c7f7d2b489dd592945466b3b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b41b1571287fe9c03bb9ab19add808a6') in 0.005988 seconds
-  Import took 0.009757 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.086516 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/CreamRockTexture.bmp
-  artifactKey: Guid(bde3a2a9e6a187a4dbaa2feeeb7a1639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/CreamRockTexture.bmp using Guid(bde3a2a9e6a187a4dbaa2feeeb7a1639) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8e78969921b517f3204482deaba5cc2') in 0.026732 seconds
-  Import took 0.029284 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000356 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/DirtTexture.png
-  artifactKey: Guid(8abe498cae8794042aa027325368971d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/DirtTexture.png using Guid(8abe498cae8794042aa027325368971d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '32b809c222d611774ced58de4f4df0de') in 0.102775 seconds
-  Import took 0.105119 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/PathTexture.png
-  artifactKey: Guid(371f2b134af4a3c4f9969adf5f6a1dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/PathTexture.png using Guid(371f2b134af4a3c4f9969adf5f6a1dd6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dd83cef1357ffee7b42dee28390b45ac') in 0.086330 seconds
-  Import took 0.088585 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000355 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/GroundDirtTexture.png
-  artifactKey: Guid(f5dc9e5bfdd132c4684da78e895e86ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/GroundDirtTexture.png using Guid(f5dc9e5bfdd132c4684da78e895e86ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'fdff66b3160f9148ca974ceaab5f3f0c') in 0.086375 seconds
-  Import took 0.088371 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000342 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/RockTexture.bmp
-  artifactKey: Guid(96bdb7c446f57194187545458218eff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/RockTexture.bmp using Guid(96bdb7c446f57194187545458218eff7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd4d77e961e73d47e75029506a036e1c6') in 0.022646 seconds
-  Import took 0.024830 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000352 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/DirtTiled.png
-  artifactKey: Guid(54bb299b77a185740afba7ce5c1a14f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/DirtTiled.png using Guid(54bb299b77a185740afba7ce5c1a14f4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '25b4102e2eea797135195c1ed4d6bae4') in 0.064238 seconds
-  Import took 0.069367 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000467 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/GrassTiled.png
-  artifactKey: Guid(fa2698a16937f8f448f877f1bffefb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/GrassTiled.png using Guid(fa2698a16937f8f448f877f1bffefb80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '48ef80eb69f413233af093f5313dcacb') in 0.055655 seconds
-  Import took 0.058732 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.420582 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/Materials
-  artifactKey: Guid(de2106a385d96ab4a903895d559dbc4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/Materials using Guid(de2106a385d96ab4a903895d559dbc4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '785e55b4385abfec25839ac3a6377f05') in 0.020102 seconds
-  Import took 0.022536 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.282086 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/Materials/RockTexture.mat
-  artifactKey: Guid(986234f24b312b5439eba290889bcbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/Materials/RockTexture.mat using Guid(986234f24b312b5439eba290889bcbd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ec19926341cc3ee469d68bca3b3c7a98') in 0.129405 seconds
-  Import took 0.132305 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.229597 seconds.
-  path: Assets/Mario Assets/Models/Textures/Tiled/Button0.mat
-  artifactKey: Guid(292ab5a0722838d4bae95a58f45ef033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Mario Assets/Models/Textures/Tiled/Button0.mat using Guid(292ab5a0722838d4bae95a58f45ef033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5c61e7a4a1b6a1fe95ea0f1eef417308') in 0.025630 seconds
-  Import took 0.029357 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 127.740004 seconds.
-  path: Assets/Scripts/Door.cs
-  artifactKey: Guid(2ef8c77d1d8a80f42834a25431baa3e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Door.cs using Guid(2ef8c77d1d8a80f42834a25431baa3e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'f284aebb6c82852c594858cfcf216841') in 0.031396 seconds
-  Import took 0.034991 seconds .
+Unloading 1120 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.4 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1580.
+Total: 2.238400 ms (FindLiveObjects: 0.226600 ms CreateObjectMapping: 0.098800 ms MarkObjects: 1.848900 ms  DeleteObjects: 0.062600 ms)
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.000739 seconds.
+Registered in 0.000754 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.38 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Invoked RoslynAnalysisRunner static constructor.
 RoslynAnalysisRunner will not be running.
 RoslynAnalysisRunner has terminated.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.878 seconds
+- Completed reload, in  0.929 seconds
 Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.28 ms, found 0 plugins.
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1119 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 65.0 MB.
-System memory in use after: 65.1 MB.
+Unloading 1120 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.4 MB.
+System memory in use after: 61.5 MB.
 
-Unloading 6 unused Assets to reduce memory usage. Loaded Objects now: 1657.
-Total: 2.384000 ms (FindLiveObjects: 0.239200 ms CreateObjectMapping: 0.039700 ms MarkObjects: 1.986400 ms  DeleteObjects: 0.117400 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 76.906308 seconds.
-  path: Assets/Prefabs/Door.prefab
-  artifactKey: Guid(52063dfe59c2cbd41ae67b6a7166e5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Door.prefab using Guid(52063dfe59c2cbd41ae67b6a7166e5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '92ccc84a1bd99ed1b723979d806dfb5c') in 0.090289 seconds
-  Import took 0.093815 seconds .
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1583.
+Total: 3.204900 ms (FindLiveObjects: 0.235500 ms CreateObjectMapping: 0.073200 ms MarkObjects: 2.776200 ms  DeleteObjects: 0.117600 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 318.763389 seconds.
-  path: Assets/Prefabs/Door.prefab
-  artifactKey: Guid(52063dfe59c2cbd41ae67b6a7166e5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Door.prefab using Guid(52063dfe59c2cbd41ae67b6a7166e5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfaeca58b9fd1c7ebb4bbca393c3848d') in 0.025683 seconds
-  Import took 0.028103 seconds .
+  Time since last request: 476.972938 seconds.
+  path: Assets/Scripts/MarioPlayerController.cs
+  artifactKey: Guid(ce2983d2ccbea824e9ec2dfd9e184d68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/MarioPlayerController.cs using Guid(ce2983d2ccbea824e9ec2dfd9e184d68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a9afbb902c302084380a828d068a54d0') in 0.019375 seconds
+  Import took 0.022686 seconds .
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.001169 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.26 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.901 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.25 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1120 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1586.
+Total: 4.742400 ms (FindLiveObjects: 0.351200 ms CreateObjectMapping: 0.122000 ms MarkObjects: 4.157500 ms  DeleteObjects: 0.109000 ms)
+
+========================================================================
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000777 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.23 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  0.899 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.27 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1120 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.5 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1589.
+Total: 3.190900 ms (FindLiveObjects: 0.235900 ms CreateObjectMapping: 0.061900 ms MarkObjects: 2.805100 ms  DeleteObjects: 0.086400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000682 seconds.
-  path: Assets/Prefabs/Door.prefab
-  artifactKey: Guid(52063dfe59c2cbd41ae67b6a7166e5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Door.prefab using Guid(52063dfe59c2cbd41ae67b6a7166e5fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'dfaeca58b9fd1c7ebb4bbca393c3848d') in 0.019279 seconds
-  Import took 0.023043 seconds .
+  Time since last request: 1312.377443 seconds.
+  path: Assets/Scripts/IRestartGame.cs
+  artifactKey: Guid(a8aeee650f15f7d49810212eb8964979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Scripts/IRestartGame.cs using Guid(a8aeee650f15f7d49810212eb8964979) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '5b39bc7984859442d3a3a6061ca852b4') in 0.012755 seconds
+  Import took 0.015129 seconds .
 
 ========================================================================
-Received Import Request.
-  Time since last request: 387.164271 seconds.
-  path: Assets/Prefabs/DoorButton.fbx
-  artifactKey: Guid(74d84db5bcfb3cf4b822ab1d8fdc75e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/DoorButton.fbx using Guid(74d84db5bcfb3cf4b822ab1d8fdc75e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'af90bf5d87ce126797a840f6de115833') in 0.087558 seconds
-  Import took 0.090441 seconds .
+Received Prepare
+Registering precompiled user dll's ...
+Registered in 0.000847 seconds.
+Begin MonoManager ReloadAssembly
+Native extension for WindowsStandalone target not found
+Refreshing native plugins compatible for Editor in 0.24 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Invoked RoslynAnalysisRunner static constructor.
+RoslynAnalysisRunner will not be running.
+RoslynAnalysisRunner has terminated.
+Mono: successfully reloaded assembly
+- Completed reload, in  1.008 seconds
+Platform modules already initialized, skipping
+Refreshing native plugins compatible for Editor in 0.37 ms, found 0 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 1120 Unused Serialized files (Serialized files now loaded: 0)
+System memory in use before: 61.5 MB.
+System memory in use after: 61.6 MB.
+
+Unloading 5 unused Assets to reduce memory usage. Loaded Objects now: 1592.
+Total: 2.733200 ms (FindLiveObjects: 0.245500 ms CreateObjectMapping: 0.087100 ms MarkObjects: 2.316800 ms  DeleteObjects: 0.081500 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

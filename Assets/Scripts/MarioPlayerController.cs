@@ -2,12 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MarioPlayerController : MonoBehaviour
+public class MarioPlayerController : MonoBehaviour, IRestartGame
 {
     [Header("Components")]
     [SerializeField] private Camera camera;
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterController characterController;
+    [SerializeField] private GameManager gameManager;
     [Header("Jump")]
     [SerializeField] private KeyCode jumpKey;
     [SerializeField] private float jumpSpeed;
@@ -93,6 +94,44 @@ public class MarioPlayerController : MonoBehaviour
         verticalSpeed = jumpSpeed + (jumpSpeed * 0.5f);
         animator.SetTrigger("Jump3");
         jumps = 0;
+    }
+
+    /*
+     * CheckPoints
+     */
+    private CheckPoint currentCheckPoint;
+    public void setCheckPoint(CheckPoint checkPoint)
+    {
+        if(currentCheckPoint == null || currentCheckPoint.getIndex() < checkPoint.getIndex()){
+            currentCheckPoint = checkPoint;
+        }
+    }
+
+    private void Start()
+    {
+        gameManager.AddRestartListener(this);
+    }
+
+    private void OnDestroy()
+    {
+        gameManager.RemoveRestartListener(this);
+    }
+
+    private bool resetPos = false;
+    public void RestartGame()
+    {
+        resetPos = true;
+    }
+
+    private void LateUpdate()
+    {
+        if (resetPos)
+        {
+            Transform t = currentCheckPoint.getCheckPointTransform();
+            transform.position = t.position;
+            transform.rotation = t.rotation;
+            resetPos = false;
+        }
     }
 
 }

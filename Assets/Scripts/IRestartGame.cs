@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-interface IRestartGame
+public interface IRestartGame
 {
-    void RestartGame();
+    public void RestartGame();
 }
