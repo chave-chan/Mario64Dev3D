@@ -60,14 +60,20 @@
     <Compile Include="Assets\Scripts\PlayerHealth.cs" />
     <Compile Include="Assets\Scripts\ForceApplier.cs" />
     <Compile Include="Assets\Scripts\DeadZone.cs" />
+    <Compile Include="Assets\Scripts\CheckPoint.cs" />
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\MarioPlayerController.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
     <Compile Include="Assets\Scripts\LocationReset.cs" />
-    <Compile Include="Assets\Scripts\GameManager.cs" />
+    <Compile Include="Assets\Managers\GameManager.cs" />
     <Compile Include="Assets\Scripts\IRestartGame.cs" />
     <Compile Include="Assets\Scripts\Platform.cs" />
-    <Compile Include="Assets\Scripts\CheckPoint.cs" />
+    <Compile Include="Assets\Scripts\HUD.cs" />
+    <Compile Include="Assets\Managers\DependencyContainer.cs" />
+    <Compile Include="Assets\Managers\IScoreManager.cs" />
+    <Compile Include="Assets\Managers\Score.cs" />
+    <Compile Include="Assets\Managers\ScoreManager.cs" />
+    <Compile Include="Assets\Scripts\Coin.cs" />
   </ItemGroup>
   <ItemGroup>
      <None Include="Assets\Mario Assets\Models\Shaders\RimSpecularAlpha.shader" />

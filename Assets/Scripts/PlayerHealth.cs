@@ -2,35 +2,41 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private const int initHealth = 8;
-    private int currentHealth;
+    private const float InitHealth = 100.0f;
+    private float _currentHealth;
+    public UnityEvent<float, float> healthChanged;
 
     void Start()
     {
-        currentHealth = initHealth;
+        _currentHealth = InitHealth;
     }
 
-    public void ReceiveDamage()
+    private void Update()
     {
-        currentHealth--;
+        if (Input.GetKeyDown(KeyCode.H))
+        {
+            ReceiveDamage(InitHealth / 8);
+        }
     }
 
-    public void AddHealth()
+    public void ReceiveDamage(float damage)
     {
-        currentHealth++;
+        _currentHealth -= damage;
+        healthChanged.Invoke(_currentHealth, InitHealth);
     }
 
-    public int GetCurrentHealth()
+    public float GetCurrentHealth()
     {
-        return currentHealth;
+        return _currentHealth;
     }
 
     private void LateUpdate()
     {
-        if (currentHealth <= 0)
+        if (_currentHealth <= 0)
         {
             gameObject.GetComponent<Player>().Die();
         }
