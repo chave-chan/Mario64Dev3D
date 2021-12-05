@@ -53,12 +53,15 @@
   </PropertyGroup>
   <ItemGroup>
      <Compile Include="Assets\Scripts\HUD.cs" />
+     <Compile Include="Assets\Scripts\MeshAgentTarget.cs" />
      <Compile Include="Assets\Managers\DependencyContainer.cs" />
      <Compile Include="Assets\Scripts\Door.cs" />
+     <Compile Include="Assets\Scripts\AlertArea.cs" />
      <Compile Include="Assets\Managers\IScoreManager.cs" />
      <Compile Include="Assets\Scripts\PlayerHealth.cs" />
      <Compile Include="Assets\Scripts\ForceApplier.cs" />
      <Compile Include="Assets\Managers\Score.cs" />
+     <Compile Include="Assets\Scripts\Enemy.cs" />
      <Compile Include="Assets\Managers\ScoreManager.cs" />
      <Compile Include="Assets\Scripts\Coin.cs" />
      <Compile Include="Assets\Scripts\DeadZone.cs" />
@@ -70,10 +73,8 @@
      <Compile Include="Assets\Managers\GameManager.cs" />
      <Compile Include="Assets\Scripts\IRestartGame.cs" />
      <Compile Include="Assets\Scripts\Platform.cs" />
-     <Compile Include="Assets\Scripts\MeshAgentTarget.cs" />
-     <Compile Include="Assets\Scripts\DetectPlayer.cs" />
-     <Compile Include="Assets\Scripts\Enemy.cs" />
-     <Compile Include="Assets\Scripts\AlertArea.cs" />
+     <Compile Include="Assets\Scripts\TopCollideDetection.cs" />
+     <Compile Include="Assets\Scripts\LateralColliders.cs" />
      <None Include="Assets\Mario Assets\Models\Shaders\RimSpecularAlpha.shader" />
      <None Include="Assets\Mario Assets\Models\Shaders\RimSpecular.shader" />
      <None Include="Assets\Mario Assets\Models\Shaders\RimReflect.shader" />

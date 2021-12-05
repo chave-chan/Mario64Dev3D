@@ -6,16 +6,13 @@ public class Enemy : MonoBehaviour
 {
     enum ENEMY_STATE
     {
-        PATROL, CHASING, IDLE, ALERT, ATTACK, HIT, DIE
+        PATROL, CHASING, DIE
     }
 
     [SerializeField] private MeshAgentTarget _meshAgentTarget;
     private ENEMY_STATE currentState = ENEMY_STATE.PATROL;
     private bool playerInRoom = true;
     private bool playerHeard = false;
-    private bool playerDetected = false;
-    private bool playerInRange = false;
-    [SerializeField] private float hitTime = 15f;
     private float currentHitTime = 0;
     
     void startPatrol()
@@ -24,26 +21,10 @@ public class Enemy : MonoBehaviour
         //TODO: init patrol state
     }
 
-    void startAlert()
-    {
-        currentState = ENEMY_STATE.ALERT;
-    }
-    
     void startChasing()
     {
         currentState = ENEMY_STATE.CHASING;
         //TODO: init chasing state
-    }
-
-    void startAttack()
-    {
-        currentState = ENEMY_STATE.ATTACK;
-    }
-
-    void startHit()
-    {
-        currentState = ENEMY_STATE.HIT;
-        currentHitTime = hitTime;
     }
 
     void startDie()
@@ -54,45 +35,15 @@ public class Enemy : MonoBehaviour
     void updatePatrol()
     {
         if(playerHeard)
-            startAlert();
-        _meshAgentTarget.Patrol();
-    }
-
-    void updateAlert()
-    {
-        if(playerDetected)
             startChasing();
-        if(!playerHeard)
-            startPatrol();
-        _meshAgentTarget.Alert();
+        _meshAgentTarget.Patrol();
     }
 
     void updateChasing()
     {
-        if(!playerDetected)
-            startAlert();
-        if(playerInRange)
-            startAttack();
+        if(!playerHeard)
+            startPatrol();
         _meshAgentTarget.Chase();
-    }
-
-    void updateAttack()
-    {
-        if(!playerInRange)
-            startChasing();
-        _meshAgentTarget.Attack();
-    }
-
-    void updateHit()
-    {
-        if (currentHitTime <= 0f)
-        {
-            startAlert();
-        }
-        else
-        {
-            hitTime -= Time.deltaTime;
-        }
     }
 
     void updateDie()
@@ -107,17 +58,8 @@ public class Enemy : MonoBehaviour
             case ENEMY_STATE.PATROL:
                 updatePatrol();
                 break;
-            case ENEMY_STATE.ALERT:
-                updateAlert();
-                break;
             case ENEMY_STATE.CHASING:
                 updateChasing();
-                break;
-            case ENEMY_STATE.ATTACK:
-                updateAttack();
-                break;
-            case ENEMY_STATE.HIT:
-                updateHit();
                 break;
             case ENEMY_STATE.DIE:
                 updateDie();
@@ -130,31 +72,8 @@ public class Enemy : MonoBehaviour
         this.playerHeard = playerHeard;
     }
 
-    public void SetPlayerDetected(bool playerDetected)
-    {
-        this.playerDetected = playerDetected;
-    }
-
-    public void SetPlayerInRange(bool playerInRange)
-    {
-        this.playerInRange = playerInRange;
-    }
-
-    public void SetEnemyHit()
-    {
-        startHit();
-    }
-
     public void SetEnemyDie()
     {
         startDie();
     }
 }
-
-/*
-interface EnemyState
-{
-    void setState(Enemy enemy);
-    void updateState(Enemy enemy);
-}
-*/

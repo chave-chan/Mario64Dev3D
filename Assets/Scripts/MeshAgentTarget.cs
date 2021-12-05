@@ -5,11 +5,15 @@ using UnityEngine.AI;
 
 public class MeshAgentTarget : MonoBehaviour
 {
+    [Header("EXCLUSIVE NAV")]
     [SerializeField] private NavMeshAgent _Agent;
-    [SerializeField] private Transform originPoint;
-    [SerializeField] private Transform destinationPoint;
     [SerializeField] private Transform _Player;
 
+    [Header("NAVIGATION POINTS")]
+    [SerializeField] private Transform originPoint;
+    [SerializeField] private Transform destinationPoint;
+
+    [Header("ANIMATION")]
     [SerializeField] private Animator _animator;
     [SerializeField] private float lerpTime = 1;
 

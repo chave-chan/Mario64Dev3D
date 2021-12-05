@@ -15,18 +15,15 @@ public class PlayerHealth : MonoBehaviour
         _currentHealth = InitHealth;
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.H))
-        {
-            ReceiveDamage(InitHealth / 8);
-        }
-    }
-
     public void ReceiveDamage(float damage)
     {
         _currentHealth -= damage;
         healthChanged.Invoke(_currentHealth, InitHealth);
+    }
+
+    public float GetInitHealth()
+    {
+        return InitHealth;
     }
 
     public float GetCurrentHealth()
