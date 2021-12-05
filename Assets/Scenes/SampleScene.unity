@@ -2601,6 +2601,10 @@ PrefabInstance:
       propertyPath: hitPosition
       value: 
       objectReference: {fileID: 98720203}
+    - target: {fileID: 8972643604823044854, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
+      propertyPath: longJumpSpeed
+      value: 14
+      objectReference: {fileID: 0}
     - target: {fileID: 9093922729756714004, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
       propertyPath: m_Enabled
       value: 1

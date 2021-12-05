@@ -12,6 +12,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     [SerializeField] private GameManager gameManager;
     [Header("Jump")] [SerializeField] private KeyCode jumpKey;
     [SerializeField] private float jumpSpeed;
+    [SerializeField] private float longJumpSpeed;
     [Header("Movement")] [SerializeField] private KeyCode forwardKey;
     [SerializeField] private KeyCode backKey;
     [SerializeField] private KeyCode rightKey;
@@ -39,7 +40,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         Vector3 l_right = camera.transform.right;
         l_right.y = 0.0f;
         l_right.Normalize();
-        
+
         if (Input.GetKey(forwardKey))
         {
             movement += l_forward;
@@ -84,18 +85,17 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         //Jump
         if (Input.GetKeyDown(jumpKey) && onGround)
         {
+            if (Input.GetKey(runKey))
+                LongJump();
+
             if (jumps == 1 && timeBtwJump >= 0f)
-            {
                 DoubleJump();
-            }
+            
             else if (jumps == 2 && timeBtwJump >= 0f)
-            {
                 TripleJump();
-            }
+
             else
-            {
                 Jump();
-            }
         }
         //Wall Jump
         else if (Input.GetKey(jumpKey) && onWall)
@@ -109,14 +109,14 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             timeBtwJump -= Time.deltaTime;
         else if (!onGround)
             timeBtwJump = 5f;
-        if (onWall) 
+        if (onWall)
             //TODO: ANIMATION OF BEING IN WALL
             Debug.Log("ANIMATION PLAY");
-        else if(!onWall)
+        else if (!onWall)
             //TODO: ANIMATION OF BEING IN WALL DROPS
             Debug.Log("BYE BYE ANIMATION");
-        
-            //Mario movement
+
+        //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
         movement.y += verticalSpeed * Time.deltaTime;
         CollisionFlags cf = characterController.Move(movement);
@@ -152,11 +152,18 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         jumps = 1;
     }
 
+    private void LongJump()
+    {
+        verticalSpeed = longJumpSpeed;
+        animator.SetTrigger("Jump1");
+        jumps = 1;
+    }
+
     private void WallJump()
     {
         verticalSpeed = jumpSpeed;
     }
-    
+
 
     private void DoubleJump()
     {
@@ -207,7 +214,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             //TODO: ANIMATOR ANIMATION OF GETTING HIT
             gotHitted = false;
         }
-        
+
         if (resetPos)
         {
             Transform t = currentCheckPoint.getCheckPointTransform();
