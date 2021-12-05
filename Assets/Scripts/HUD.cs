@@ -8,6 +8,8 @@ public class HUD : MonoBehaviour
 {
     public Text score;
     public Image healthUI;
+    public Text lifeTotal;
+    public PlayerHealth ph;
 
     private void Start()
     {
@@ -30,5 +32,10 @@ public class HUD : MonoBehaviour
     public void changedHealth(float currentHealth, float totalHealth)
     {
         healthUI.fillAmount = currentHealth / totalHealth;
+    }
+
+    public void updateLifeTotal()
+    {
+        lifeTotal.text = "" + ph.getLifeTotal();
     }
 }

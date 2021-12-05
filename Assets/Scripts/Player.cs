@@ -13,8 +13,6 @@ public class Player : MonoBehaviour
 
     public void Die()
     {
-        Debug.Log("PLAYER DIES");
-        //TODO: HUD OF DEATH APPEARS
         animator.SetTrigger("Death");
         gameManager.GameOver();
     }

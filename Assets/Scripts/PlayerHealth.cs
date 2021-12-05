@@ -6,9 +6,11 @@ using UnityEngine.Events;
 
 public class PlayerHealth : MonoBehaviour
 {
+    [SerializeField] private Animator animator;
     private const float InitHealth = 100.0f;
     private float _currentHealth;
     public UnityEvent<float, float> healthChanged;
+    private int lifeTotal = 3;
 
     void Start()
     {
@@ -17,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
 
     public void ReceiveDamage(float damage)
     {
+        animator.SetTrigger("Damage");
         _currentHealth -= damage;
         healthChanged.Invoke(_currentHealth, InitHealth);
         gameObject.GetComponent<MarioPlayerController>().getHit();
@@ -44,5 +47,15 @@ public class PlayerHealth : MonoBehaviour
     {
         _currentHealth = InitHealth;
         healthChanged.Invoke(_currentHealth, InitHealth);
+    }
+
+    public void Revive()
+    {
+        lifeTotal--;
+    }
+
+    public int getLifeTotal()
+    {
+        return lifeTotal;
     }
 }

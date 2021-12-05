@@ -6,6 +6,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 {
     [Header("Components")] [SerializeField]
     private Camera camera;
+    [SerializeField] private CameraController cameraController;
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterController characterController;
     [SerializeField] private GameManager gameManager;
@@ -26,7 +27,9 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     private bool onWall;
     private int jumps = 0;
     private int punches = 0;
-    public float timeBtwJump = 5f;
+    private float timeBtwJump = 5f;
+    private float timeNoAction = 5f;
+    private float timeSpecialIdle = 10f;
 
     private Rigidbody rb;
 
@@ -47,6 +50,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             movement += l_forward;
             jumps = 0;
             punches = 0;
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
         }
 
         if (Input.GetKey(backKey))
@@ -55,6 +60,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             movement -= l_forward;
             jumps = 0;
             punches = 0;
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
         }
 
         if (Input.GetKey(rightKey))
@@ -63,6 +70,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             movement += l_right;
             jumps = 0;
             punches = 0;
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
         }
 
         if (Input.GetKey(leftKey))
@@ -71,10 +80,14 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             movement -= l_right;
             jumps = 0;
             punches = 0;
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
         }
 
         if (Input.GetKey(KeyCode.E))
         {
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
             _punchScript.enabled = true;
             if (punches == 1)
                 Punch2();
@@ -96,6 +109,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         float animSpeed = movement.x == 0 ? 0.0f : 0.3f;
         if (Input.GetKey(runKey))
         {
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
             animSpeed = 0.8f;
         }
 
@@ -104,6 +119,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         //Jump
         if (Input.GetKeyDown(jumpKey) && onGround)
         {
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
             _punchScript.enabled = false;
             punches = 0;
             if (Input.GetKey(runKey))
@@ -121,6 +138,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         //Wall Jump
         else if (Input.GetKey(jumpKey) && onWall)
         {
+            timeNoAction = 5f;
+            timeSpecialIdle = 10f;
             _punchScript.enabled = false;
             punches = 0;
             WallJump();
@@ -154,13 +173,18 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             {
                 verticalSpeed = 0;
             }
-
             onGround = false;
             onWall = false;
         }
 
         animator.SetBool("OnGround", onGround);
-        
+        animator.SetBool("OnWall", onWall);
+        if (timeNoAction <= 0) cameraController.setBetterCamera();
+        else if (timeNoAction >= 0) { cameraController.unsetBetterCamera(); }
+        timeNoAction -= Time.deltaTime;
+        if (timeSpecialIdle <= 0) animator.SetBool("SpecialIdle", true);
+        else if (timeSpecialIdle >= 0) { animator.SetBool("SpecialIdle", false); }
+        timeSpecialIdle -= Time.deltaTime;
     }
     private void Punch1()
     {
@@ -197,7 +221,6 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     private void WallJump()
     {
         verticalSpeed = jumpSpeed;
-        animator.SetBool("OnWall", onWall);
     }
 
 
