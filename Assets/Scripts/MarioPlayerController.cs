@@ -6,7 +6,6 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 {
     [Header("Components")] [SerializeField]
     private Camera camera;
-
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterController characterController;
     [SerializeField] private GameManager gameManager;
@@ -114,7 +113,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             Debug.Log("ANIMATION PLAY");
         else if (!onWall)
             //TODO: ANIMATION OF BEING IN WALL DROPS
-            Debug.Log("BYE BYE ANIMATION");
+            //Debug.Log("BYE BYE ANIMATION");
 
         //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
@@ -155,7 +154,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     private void LongJump()
     {
         verticalSpeed = longJumpSpeed;
-        animator.SetTrigger("Jump1");
+        animator.SetTrigger("LongJump");
         jumps = 1;
     }
 
@@ -204,6 +203,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
     public void RestartGame()
     {
+        animator.SetTrigger("Restart");
         resetPos = true;
     }
 
@@ -211,7 +211,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     {
         if (gotHitted)
         {
-            //TODO: ANIMATOR ANIMATION OF GETTING HIT
+            animator.SetTrigger("GotHitted");
             gotHitted = false;
         }
 

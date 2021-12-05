@@ -29,6 +29,18 @@ Animation:
   m_PlayAutomatically: 1
   m_AnimatePhysics: 0
   m_CullingType: 0
+--- !u!114 &2276865583216790206
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 95678884116906584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b2e97acfe385904eaadb64b12bfda33, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8969022003963815507
 GameObject:
   m_ObjectHideFlags: 0

@@ -39,4 +39,10 @@ public class PlayerHealth : MonoBehaviour
             gameObject.GetComponent<Player>().Die();
         }
     }
+
+    public void completeHeal()
+    {
+        _currentHealth = InitHealth;
+        healthChanged.Invoke(_currentHealth, InitHealth);
+    }
 }
