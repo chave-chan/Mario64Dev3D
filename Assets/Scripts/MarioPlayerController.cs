@@ -103,16 +103,20 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             WallJump();
         }
 
-        if (onGround)
-            timeBtwJump -= Time.deltaTime;
         if (timeBtwJump <= 0f)
             jumps = 0;
-        if (!onGround)
+        if (onGround)
+            timeBtwJump -= Time.deltaTime;
+        else if (!onGround)
             timeBtwJump = 5f;
-        if(onWall) 
+        if (onWall) 
             //TODO: ANIMATION OF BEING IN WALL
+            Debug.Log("ANIMATION PLAY");
+        else if(!onWall)
+            //TODO: ANIMATION OF BEING IN WALL DROPS
+            Debug.Log("BYE BYE ANIMATION");
         
-        //Mario movement
+            //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
         movement.y += verticalSpeed * Time.deltaTime;
         CollisionFlags cf = characterController.Move(movement);
