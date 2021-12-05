@@ -4,16 +4,15 @@ using UnityEngine;
 
 public class MarioPlayerController : MonoBehaviour, IRestartGame
 {
-    [Header("Components")]
-    [SerializeField] private Camera camera;
+    [Header("Components")] [SerializeField]
+    private Camera camera;
+
     [SerializeField] private Animator animator;
     [SerializeField] private CharacterController characterController;
     [SerializeField] private GameManager gameManager;
-    [Header("Jump")]
-    [SerializeField] private KeyCode jumpKey;
+    [Header("Jump")] [SerializeField] private KeyCode jumpKey;
     [SerializeField] private float jumpSpeed;
-    [Header("Movement")]
-    [SerializeField] private KeyCode forwardKey;
+    [Header("Movement")] [SerializeField] private KeyCode forwardKey;
     [SerializeField] private KeyCode backKey;
     [SerializeField] private KeyCode rightKey;
     [SerializeField] private KeyCode leftKey;
@@ -22,7 +21,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     [SerializeField] private float runSpeed;
     private float verticalSpeed = 0.0f;
     private bool onGround;
-    private int jumps = 0;
+    public int jumps = 0;
+    public float timeBtwJump = 5f;
 
     private void Update()
     {
@@ -34,10 +34,31 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         Vector3 l_right = camera.transform.right;
         l_right.y = 0.0f;
         l_right.Normalize();
-        if (Input.GetKey(forwardKey)) { movement += l_forward; }
-        if (Input.GetKey(backKey)) { movement -= l_forward; }
-        if (Input.GetKey(rightKey)) { movement += l_right; }
-        if (Input.GetKey(leftKey)) { movement -= l_right; }
+        
+        if (Input.GetKey(forwardKey))
+        {
+            movement += l_forward;
+            jumps = 0;
+        }
+
+        if (Input.GetKey(backKey))
+        {
+            movement -= l_forward;
+            jumps = 0;
+        }
+
+        if (Input.GetKey(rightKey))
+        {
+            movement += l_right;
+            jumps = 0;
+        }
+
+        if (Input.GetKey(leftKey))
+        {
+            movement -= l_right;
+            jumps = 0;
+        }
+
         float currentSpeed = Input.GetKey(runKey) ? runSpeed : walkSpeed; //Si es true = run; Si es false = walk
         if (movement.magnitude > 0)
         {
@@ -45,34 +66,61 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             transform.forward = movement;
             movement *= currentSpeed * Time.deltaTime;
         }
+
         //Idle, Walk & Run Animations
         float animSpeed = movement.x == 0 ? 0.0f : 0.3f;
-        if (Input.GetKey(runKey)) { animSpeed = 0.8f; }
-        animator.SetFloat("Speed", animSpeed);
-        //Jump
-        if (Input.GetKeyDown(jumpKey) && onGround) {
-            if(jumps == 0) { Jump(); }
-            else if(jumps == 1) { DoubleJump(); }
-            else if(jumps == 2) { TripleJump(); }
+        if (Input.GetKey(runKey))
+        {
+            animSpeed = 0.8f;
         }
+
+        animator.SetFloat("Speed", animSpeed);
+
+        //Jump
+        if (Input.GetKeyDown(jumpKey) && onGround)
+        {
+            if (jumps == 1 && timeBtwJump >= 0f)
+            {
+                DoubleJump();
+            }
+            else if (jumps == 2 && timeBtwJump >= 0f)
+            {
+                TripleJump();
+            }
+            else
+            {
+                Jump();
+            }
+        }
+
+        if (onGround)
+            timeBtwJump -= Time.deltaTime;
+        if (timeBtwJump <= 0f)
+            jumps = 0;
+        if (!onGround)
+            timeBtwJump = 5f;
+
         //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
         movement.y += verticalSpeed * Time.deltaTime;
         CollisionFlags cf = characterController.Move(movement);
 
-        if((cf & CollisionFlags.Below) != 0){
+        if ((cf & CollisionFlags.Below) != 0)
+        {
             onGround = true;
             verticalSpeed = -1.0f;
         }
         else
         {
-            if((cf & CollisionFlags.Above) != 0 && verticalSpeed > 0)
+            if ((cf & CollisionFlags.Above) != 0 && verticalSpeed > 0)
             {
                 verticalSpeed = 0;
             }
+
             onGround = false;
         }
-        animator.SetBool("OnGround", onGround);      
+
+        animator.SetBool("OnGround", onGround);
     }
 
     private void Jump()
@@ -84,7 +132,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
     private void DoubleJump()
     {
-        verticalSpeed = jumpSpeed + (jumpSpeed*0.25f);
+        verticalSpeed = jumpSpeed + (jumpSpeed * 0.25f);
         animator.SetTrigger("Jump2");
         jumps = 2;
     }
@@ -96,13 +144,12 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         jumps = 0;
     }
 
-    /*
-     * CheckPoints
-     */
     private CheckPoint currentCheckPoint;
+
     public void setCheckPoint(CheckPoint checkPoint)
     {
-        if(currentCheckPoint == null || currentCheckPoint.getIndex() < checkPoint.getIndex()){
+        if (currentCheckPoint == null || currentCheckPoint.getIndex() < checkPoint.getIndex())
+        {
             currentCheckPoint = checkPoint;
         }
     }
@@ -118,6 +165,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     }
 
     private bool resetPos = false;
+
     public void RestartGame()
     {
         resetPos = true;
@@ -133,5 +181,4 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             resetPos = false;
         }
     }
-
 }
