@@ -38,6 +38,6 @@ public class GameManager : MonoBehaviour
 
     public void RemoveRestartListener(IRestartGame listener)
     {
-        listeners.Add(listener);
+        listeners.Remove(listener);
     }
 }
