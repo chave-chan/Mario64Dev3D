@@ -234,6 +234,36 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7c0c5ddd8aaaf0648a5624fc561b3af4, type: 3}
+--- !u!1 &98720202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 98720203}
+  m_Layer: 0
+  m_Name: HitPos
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &98720203
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 98720202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0, y: 0.84, z: -1.61}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1627789927}
+  m_RootOrder: 9
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &106545899
 GameObject:
   m_ObjectHideFlags: 0
@@ -1629,6 +1659,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 41031283}
     m_Modifications:
+    - target: {fileID: 3712243252855953763, guid: c6a5a2e4ca3970946b247dbfe0c5562f, type: 3}
+      propertyPath: ph
+      value: 
+      objectReference: {fileID: 1622327104743274433}
     - target: {fileID: 7622756612432813222, guid: c6a5a2e4ca3970946b247dbfe0c5562f, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -2535,6 +2569,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4087023090798067258, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 4087023090798067704, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
       propertyPath: m_Name
       value: SuperMario
@@ -2548,9 +2586,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 963194227}
     - target: {fileID: 8972643604823044854, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
+      propertyPath: hitForce
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8972643604823044854, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
       propertyPath: jumpSpeed
       value: 7
       objectReference: {fileID: 0}
+    - target: {fileID: 8972643604823044854, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
+      propertyPath: gameManager
+      value: 
+      objectReference: {fileID: 106545900}
+    - target: {fileID: 8972643604823044854, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
+      propertyPath: hitPosition
+      value: 
+      objectReference: {fileID: 98720203}
     - target: {fileID: 9093922729756714004, guid: 8ecab4671b6cfd441a491519674d90bc, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -2688,6 +2738,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 41031283}
     m_Modifications:
+    - target: {fileID: 3712243252855953763, guid: c6a5a2e4ca3970946b247dbfe0c5562f, type: 3}
+      propertyPath: ph
+      value: 
+      objectReference: {fileID: 1622327104743274433}
+    - target: {fileID: 3712243252855953763, guid: c6a5a2e4ca3970946b247dbfe0c5562f, type: 3}
+      propertyPath: initTimeOfDamage
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 7622756612432813222, guid: c6a5a2e4ca3970946b247dbfe0c5562f, type: 3}
       propertyPath: m_RootOrder
       value: 0

@@ -19,6 +19,7 @@ public class PlayerHealth : MonoBehaviour
     {
         _currentHealth -= damage;
         healthChanged.Invoke(_currentHealth, InitHealth);
+        gameObject.GetComponent<MarioPlayerController>().getHit();
     }
 
     public float GetInitHealth()

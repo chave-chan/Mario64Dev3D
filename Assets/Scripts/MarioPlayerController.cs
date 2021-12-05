@@ -19,10 +19,14 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     [SerializeField] private KeyCode runKey;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
+    [SerializeField] private Transform hitPosition;
+    private bool gotHitted = false;
     private float verticalSpeed = 0.0f;
     private bool onGround;
     public int jumps = 0;
     public float timeBtwJump = 5f;
+
+    private Rigidbody rb;
 
     private void Update()
     {
@@ -157,6 +161,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     private void Start()
     {
         gameManager.AddRestartListener(this);
+        rb = gameObject.GetComponent<Rigidbody>();
     }
 
     private void OnDestroy()
@@ -173,6 +178,12 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
     private void LateUpdate()
     {
+        if (gotHitted)
+        {
+            //TODO: ANIMATOR ANIMATION OF GETTING HIT
+            gotHitted = false;
+        }
+        
         if (resetPos)
         {
             Transform t = currentCheckPoint.getCheckPointTransform();
@@ -180,5 +191,10 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             transform.rotation = t.rotation;
             resetPos = false;
         }
+    }
+
+    public void getHit()
+    {
+        gotHitted = true;
     }
 }

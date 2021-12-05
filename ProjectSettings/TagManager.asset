@@ -5,6 +5,7 @@ TagManager:
   serializedVersion: 2
   tags:
   - Bridge
+  - PlayerShoes
   layers:
   - Default
   - TransparentFX
