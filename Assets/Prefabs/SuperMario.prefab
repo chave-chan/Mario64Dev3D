@@ -480,6 +480,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4087023090797765176}
   - component: {fileID: 4087023090784465758}
+  - component: {fileID: 4754330845231104727}
+  - component: {fileID: 5134315411553216584}
   m_Layer: 0
   m_Name: glove1
   m_TagString: Untagged
@@ -555,6 +557,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.28421295, y: 0.016679376, z: -0.02171624}
     m_Extent: {x: 0.16007996, y: 0.14024162, z: 0.12870595}
   m_DirtyAABB: 0
+--- !u!65 &4754330845231104727
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087023090798067224}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3223305, y: 0.28335744, z: 0.25787115}
+  m_Center: {x: 0.61088926, y: 0.023206707, z: 0.7869263}
+--- !u!114 &5134315411553216584
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087023090798067224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef74de496fffee54590de170c7ea2d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4087023090798067226
 GameObject:
   m_ObjectHideFlags: 0
@@ -684,6 +711,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4087023090797765182}
   - component: {fileID: 4087023090784465756}
+  - component: {fileID: 2524529624847367683}
+  - component: {fileID: 8621322389172479648}
   m_Layer: 0
   m_Name: glove2
   m_TagString: Untagged
@@ -759,6 +788,31 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.28339756, y: -0.01689744, z: -0.021840513}
     m_Extent: {x: 0.16005933, y: 0.14012302, z: 0.12861966}
   m_DirtyAABB: 0
+--- !u!65 &2524529624847367683
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087023090798067230}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.3222855, y: 0.2831173, z: 0.25769845}
+  m_Center: {x: -0.6109306, y: 0.022998594, z: 0.78680354}
+--- !u!114 &8621322389172479648
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4087023090798067230}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef74de496fffee54590de170c7ea2d67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &4087023090798067232
 GameObject:
   m_ObjectHideFlags: 0
@@ -2080,8 +2134,10 @@ MonoBehaviour:
   camera: {fileID: 0}
   animator: {fileID: 4087023090788666778}
   characterController: {fileID: 9093922729756714004}
+  gameManager: {fileID: 0}
   jumpKey: 32
   jumpSpeed: 7
+  longJumpSpeed: 0
   forwardKey: 119
   backKey: 115
   rightKey: 100
@@ -2089,6 +2145,8 @@ MonoBehaviour:
   runKey: 304
   walkSpeed: 2
   runSpeed: 7
+  hitPosition: {fileID: 0}
+  timeBtwJump: 5
 --- !u!114 &580144144101662990
 MonoBehaviour:
   m_ObjectHideFlags: 0

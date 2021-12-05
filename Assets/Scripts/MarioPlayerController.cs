@@ -24,7 +24,8 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     private float verticalSpeed = 0.0f;
     private bool onGround;
     private bool onWall;
-    public int jumps = 0;
+    private int jumps = 0;
+    private int punches = 0;
     public float timeBtwJump = 5f;
 
     private Rigidbody rb;
@@ -44,24 +45,38 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         {
             movement += l_forward;
             jumps = 0;
+            punches = 0;
         }
 
         if (Input.GetKey(backKey))
         {
             movement -= l_forward;
             jumps = 0;
+            punches = 0;
         }
 
         if (Input.GetKey(rightKey))
         {
             movement += l_right;
             jumps = 0;
+            punches = 0;
         }
 
         if (Input.GetKey(leftKey))
         {
             movement -= l_right;
             jumps = 0;
+            punches = 0;
+        }
+
+        if (Input.GetKey(KeyCode.E))
+        {
+            if (punches == 1)
+                Punch2();
+            else if (punches == 2)
+                Punch3();
+            else
+                Punch1();
         }
 
         float currentSpeed = Input.GetKey(runKey) ? runSpeed : walkSpeed; //Si es true = run; Si es false = walk
@@ -84,6 +99,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         //Jump
         if (Input.GetKeyDown(jumpKey) && onGround)
         {
+            punches = 0;
             if (Input.GetKey(runKey))
                 LongJump();
 
@@ -99,6 +115,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         //Wall Jump
         else if (Input.GetKey(jumpKey) && onWall)
         {
+            punches = 0;
             WallJump();
         }
 
@@ -108,12 +125,6 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             timeBtwJump -= Time.deltaTime;
         else if (!onGround)
             timeBtwJump = 5f;
-        if (onWall)
-            //TODO: ANIMATION OF BEING IN WALL
-            Debug.Log("ANIMATION PLAY");
-        else if (!onWall)
-            //TODO: ANIMATION OF BEING IN WALL DROPS
-            //Debug.Log("BYE BYE ANIMATION");
 
         //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
@@ -142,6 +153,24 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         }
 
         animator.SetBool("OnGround", onGround);
+        
+    }
+    private void Punch1()
+    {
+        punches = 1;
+        animator.SetTrigger("Punch1");
+    }
+
+    private void Punch2()
+    {
+        punches = 2;
+        animator.SetTrigger("Punch2");
+    }
+
+    private void Punch3()
+    {
+        punches = 0;
+        animator.SetTrigger("Punch3");
     }
 
     private void Jump()
@@ -161,6 +190,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     private void WallJump()
     {
         verticalSpeed = jumpSpeed;
+        animator.SetBool("OnWall", onWall);
     }
 
 

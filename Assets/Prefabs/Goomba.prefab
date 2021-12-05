@@ -115,6 +115,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f3fd01d1800c7e4bba113c7344fa875, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initTimeOfDamage: 0
+  timeOfDamage: 0
 --- !u!1 &7622756612282783831
 GameObject:
   m_ObjectHideFlags: 0
@@ -275,7 +277,7 @@ GameObject:
   - component: {fileID: 7622756612442003722}
   m_Layer: 0
   m_Name: Goomba
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
