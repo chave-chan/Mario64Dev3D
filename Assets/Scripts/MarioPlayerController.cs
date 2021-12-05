@@ -19,7 +19,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     [SerializeField] private KeyCode runKey;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
-    [SerializeField] private Transform hitPosition;
+    [SerializeField] private BoxCollider _punchScript;
     private bool gotHitted = false;
     private float verticalSpeed = 0.0f;
     private bool onGround;
@@ -43,6 +43,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
         if (Input.GetKey(forwardKey))
         {
+            _punchScript.enabled = false;
             movement += l_forward;
             jumps = 0;
             punches = 0;
@@ -50,6 +51,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
         if (Input.GetKey(backKey))
         {
+            _punchScript.enabled = false;
             movement -= l_forward;
             jumps = 0;
             punches = 0;
@@ -57,6 +59,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
         if (Input.GetKey(rightKey))
         {
+            _punchScript.enabled = false;
             movement += l_right;
             jumps = 0;
             punches = 0;
@@ -64,6 +67,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
         if (Input.GetKey(leftKey))
         {
+            _punchScript.enabled = false;
             movement -= l_right;
             jumps = 0;
             punches = 0;
@@ -71,6 +75,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
 
         if (Input.GetKey(KeyCode.E))
         {
+            _punchScript.enabled = true;
             if (punches == 1)
                 Punch2();
             else if (punches == 2)
@@ -99,6 +104,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         //Jump
         if (Input.GetKeyDown(jumpKey) && onGround)
         {
+            _punchScript.enabled = false;
             punches = 0;
             if (Input.GetKey(runKey))
                 LongJump();
@@ -115,6 +121,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         //Wall Jump
         else if (Input.GetKey(jumpKey) && onWall)
         {
+            _punchScript.enabled = false;
             punches = 0;
             WallJump();
         }
