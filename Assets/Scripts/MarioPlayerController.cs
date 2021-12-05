@@ -23,6 +23,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
     private bool gotHitted = false;
     private float verticalSpeed = 0.0f;
     private bool onGround;
+    private bool onWall;
     public int jumps = 0;
     public float timeBtwJump = 5f;
 
@@ -96,6 +97,11 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
                 Jump();
             }
         }
+        //Wall Jump
+        else if (Input.GetKey(jumpKey) && onWall)
+        {
+            WallJump();
+        }
 
         if (onGround)
             timeBtwJump -= Time.deltaTime;
@@ -103,7 +109,9 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             jumps = 0;
         if (!onGround)
             timeBtwJump = 5f;
-
+        if(onWall) 
+            //TODO: ANIMATION OF BEING IN WALL
+        
         //Mario movement
         verticalSpeed += Physics.gravity.y * Time.deltaTime;
         movement.y += verticalSpeed * Time.deltaTime;
@@ -114,6 +122,11 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             onGround = true;
             verticalSpeed = -1.0f;
         }
+        else if ((cf & CollisionFlags.Sides) != 0)
+        {
+            onWall = true;
+            verticalSpeed = -1.0f;
+        }
         else
         {
             if ((cf & CollisionFlags.Above) != 0 && verticalSpeed > 0)
@@ -122,6 +135,7 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
             }
 
             onGround = false;
+            onWall = false;
         }
 
         animator.SetBool("OnGround", onGround);
@@ -133,6 +147,12 @@ public class MarioPlayerController : MonoBehaviour, IRestartGame
         animator.SetTrigger("Jump1");
         jumps = 1;
     }
+
+    private void WallJump()
+    {
+        verticalSpeed = jumpSpeed;
+    }
+    
 
     private void DoubleJump()
     {
